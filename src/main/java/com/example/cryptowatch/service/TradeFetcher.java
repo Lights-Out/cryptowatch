@@ -11,8 +11,6 @@ import reactor.core.publisher.Flux;
 @Service
 public class TradeFetcher implements Fetcher<Trade> {
 
-    private WebClient webClient;
-
     @Override
     public Flux<Trade> fetch() {
         WebClient client = WebClient.create("https://api.bitfinex.com/v1/trades/");
